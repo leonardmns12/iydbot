@@ -35,19 +35,19 @@ if(message.content == 'request role: GTA V')
 {
     message.member.send("Role anda saat ini telah di update!");
     let memberRole = message.member.guild.roles.find("name", "GTA V");
-    message.member.addRole(memberRole);
+    message.member.addRole(memberRole).catch(console.error);
 }
 if(message.content == 'request role: CSGO')
 {
     message.member.send("Role anda saat ini telah di update!");
     let memberRole = message.member.guild.roles.find("name", "CSGO");
-    message.member.addRole(memberRole);
+    message.member.addRole(memberRole).catch(console.error);
 }
 if(message.content == 'request role: BINUSSIAN')
 {
     message.member.send("Role anda saat ini telah di update!");
     let memberRole = message.member.guild.roles.find("name", "BINUSSIAN");
-    message.member.addRole(memberRole);
+    message.member.addRole(memberRole).catch(console.error);
 }
 
 

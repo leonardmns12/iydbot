@@ -7,8 +7,7 @@ client.once('ready',()=>{
 })
 
 client.on("guildMemberAdd", function(member){
-    member.send("Hello " + member.displayName + " Selamat datang di server In Your Dreams\nabc");
-    member.send("ketik !info untuk melihat command semua command yang tersedia!");
+    member.send("Hello " + member.displayName + " Selamat datang di server In Your Dream :wave: \nketik !info untuk melihat command semua command yang tersedia! :point_down: ");
     let memberRole = member.guild.roles.find("name", "Member");
     member.addRole(memberRole);
 });

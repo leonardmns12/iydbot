@@ -7,7 +7,7 @@ client.once('ready',()=>{
 })
 
 client.on("guildMemberAdd", function(member){
-    member.send("Hello " + member.displayName + " Selamat datang di server In Your Dream 
+    member.send("Hello " + member.displayName + " Selamat datang di server In Your Dreams 
                 a");
     member.send("ketik !info untuk melihat command semua command yang tersedia!");
     let memberRole = member.guild.roles.find("name", "Member");

@@ -40,12 +40,12 @@ client.on('message', message => {
     }
     if(message.content == "role:GTA V"){
     message.member.send("Role gta v anda berhasil di update! :champagne_glass: ");
-    let memberRole = message.member.guild.roles.find("name", "CSGO");
+    let memberRole = message.member.guild.roles.find("name", "GTA V");
     message.member.addRole(memberRole);
     }
     if(message.content == "role:BINUSSIAN"){
     message.member.send("Role binussian anda berhasil di update! :champagne_glass:  ");
-    let memberRole = message.member.guild.roles.find("name", "CSGO");
+    let memberRole = message.member.guild.roles.find("name", "BINUSSIAN");
     message.member.addRole(memberRole);
     }
 

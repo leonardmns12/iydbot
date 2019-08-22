@@ -13,7 +13,7 @@ client.on("guildMemberAdd", function(member){
     let guild = member.guild; // Reading property `guild` of guildmember object.
     let memberTag = member.user.tag; // GuildMembers don't have a tag property, read property user of guildmember to get the user object from it
     if(guild.systemChannel){ // Checking if it's not null
-	guild.systemChannel.send(member.displayName + " " + memberTag + " Telah bergabung kedalam server!");
+	guild.systemChannel.send(memberTag + " Telah bergabung kedalam server!");
 }
 });
 

@@ -19,23 +19,42 @@ client.on("guildMemberAdd", function(member){
 
 client.on('message', message => {
 
-    if(message.member.hasPermissions(['KICK_MEMBERS', "BAN_MEMBERS"])){
+    
 
 
     // console.log(message.content);
 
     if( message.content.startsWith(`${prefix}kick`)){
         // message.channel.send("Kick")
-
+        if(message.member.hasPermissions(['KICK_MEMBERS', "BAN_MEMBERS"])){
         let member = message.mentions.members.first();
         member.kick().then((member) => {
             message.channel.send(member.displayName + " Telah Dikeluarkan dari Server!:wave:")
         })
     }
+    }
+    if(message.content == "role:CSGO"){
+    message.member.send("Role csgo anda berhasil di update! :champagne_glass: ");
+    let memberRole = message.member.guild.roles.find("name", "CSGO");
+    message.member.addRole(memberRole);
+    }
+    if(message.content == "role:GTA V"){
+    message.member.send("Role gta v anda berhasil di update! :champagne_glass: ");
+    let memberRole = message.member.guild.roles.find("name", "CSGO");
+    message.member.addRole(memberRole);
+    }
+    if(message.content == "role:BINUSSIAN"){
+    message.member.send("Role binussian anda berhasil di update! :champagne_glass:  ");
+    let memberRole = message.member.guild.roles.find("name", "CSGO");
+    message.member.addRole(memberRole);
+    }
 
   
 
-}
+
+	
+
+
 
 
 })

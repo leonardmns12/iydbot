@@ -7,7 +7,7 @@ client.once('ready',()=>{
 })
 
 client.on("guildMemberAdd", function(member){
-    member.send("Hello " + member.displayName + " Selamat datang di server In Your Dream :wave: \nketik !info untuk melihat semua command yang tersedia! :point_down: ");
+    member.send("Hello " + member.displayName + " Selamat datang di server In Your Dream :wave:");
     let memberRole = member.guild.roles.find("name", "Member");
     member.addRole(memberRole);
     let guild = member.guild; // Reading property `guild` of guildmember object.

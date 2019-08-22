@@ -36,27 +36,6 @@ client.on('message', message => {
   
 
 }
-	
-var args = message.content.substring(PREFIX.length).split(" ");
-
-switch(args[0].toLowerCase()){
-	case "role:CSGO":
-		message.member.send("Role CSGO anda berhasil ditambahkan!");
-		let memberRole = message.member.guild.roles.find("name", "CSGO");
-		member.addRole(memberRole).catch(console.error);
-		break;
-	case "role:GTA V":
-		message.member.send("Role GTA V anda berhasil ditambahkan!");
-		let memberRole = message.member.guild.roles.find("name", "GTA V");
-		member.addRole(memberRole).catch(console.error);
-		break;
-	case "role:BINUSSIAN":
-		message.member.send("Role Binussian anda berhasil ditambahkan!");
-		let memberRole = message.member.guild.roles.find("name", "BINUSSIAN");
-		member.addRole(memberRole).catch(console.error);
-		break;
-}
-
 
 
 })

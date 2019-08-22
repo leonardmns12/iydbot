@@ -43,17 +43,17 @@ switch(args[0].toLowerCase()){
 	case "role:CSGO":
 		message.member.send("Role CSGO anda berhasil ditambahkan!");
 		let memberRole = message.member.guild.roles.find("name", "CSGO");
-		message.member.addRole(memberRole).catch(console.error);
+		member.addRole(memberRole).catch(console.error);
 		break;
 	case "role:GTA V":
 		message.member.send("Role GTA V anda berhasil ditambahkan!");
 		let memberRole = message.member.guild.roles.find("name", "GTA V");
-		message.member.addRole(memberRole).catch(console.error);
+		member.addRole(memberRole).catch(console.error);
 		break;
 	case "role:BINUSSIAN":
 		message.member.send("Role Binussian anda berhasil ditambahkan!");
 		let memberRole = message.member.guild.roles.find("name", "BINUSSIAN");
-		message.member.addRole(memberRole).catch(console.error);
+		member.addRole(memberRole).catch(console.error);
 		break;
 }
 

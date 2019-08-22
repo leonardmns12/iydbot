@@ -50,7 +50,7 @@ client.on('message', message => {
     message.react('✅');
     }
     if(message.content == "!role:CONTENT CREATOR"){
-        message.member.send("Role BINUSSIAN anda berhasil di update! :champagne_glass:  ");
+        message.member.send("Role CONTENT CREATOR anda berhasil di update! :champagne_glass:  ");
         let memberRole = message.member.guild.roles.find("name", "CONTENT CREATOR");
         message.member.addRole(memberRole);
         message.react('✅');

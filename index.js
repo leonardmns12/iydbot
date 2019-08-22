@@ -10,6 +10,11 @@ client.on("guildMemberAdd", function(member){
     member.send("Hello " + member.displayName + " Selamat datang di server In Your Dream :wave: \nketik !info untuk melihat semua command yang tersedia! :point_down: ");
     let memberRole = member.guild.roles.find("name", "Member");
     member.addRole(memberRole);
+    let guild = member.guild; // Reading property `guild` of guildmember object.
+    let memberTag = member.user.tag; // GuildMembers don't have a tag property, read property user of guildmember to get the user object from it
+    if(guild.systemChannel){ // Checking if it's not null
+	guild.systemChannel.send(member.displayName + " " + memberTag + " Telah bergabung kedalam server!");
+}
 });
 
 client.on('message', message => {

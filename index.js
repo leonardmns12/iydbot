@@ -65,6 +65,8 @@ client.on('message', message => {
         member.kick().then((member) => {
             message.channel.send(member.displayName + " Telah Dikeluarkan dari Server!:wave:")
         })
+    }else{
+	    message.channel.send("Kamu tidak dapat akses untuk perintah ini!")
     }
     }
 

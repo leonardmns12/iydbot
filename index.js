@@ -4,6 +4,7 @@ const client = new Discord.Client();
 
 client.once('ready',()=>{
     console.log('Ready');
+	client.user.setPresence({ game: { name: 'In Your Dream ', type: 3 } });
 })
 
 client.on("guildMemberAdd", function(member){

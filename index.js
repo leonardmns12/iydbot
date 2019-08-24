@@ -22,37 +22,37 @@ client.on('message', message => {
 	
     if(message.content == "!role:CSGO"){
     message.member.send("Role CSGO anda berhasil di update! :champagne_glass: ");
-    let memberRole = message.member.guild.roles.find("name", "CSGO");
+    let memberRole = message.member.guild.roles.find("name", "CSGO🔫");
     message.member.addRole(memberRole);
     message.react('✅');
     }
     if(message.content == "!role:GTA V"){
     message.member.send("Role GTA V anda berhasil di update! :champagne_glass: ");
-    let memberRole = message.member.guild.roles.find("name", "GTA V");
+    let memberRole = message.member.guild.roles.find("name", "GTA V🏡");
     message.member.addRole(memberRole);
     message.react('✅');
     }
     if(message.content == "!role:BINUSSIAN"){
     message.member.send("Role BINUSSIAN anda berhasil di update! :champagne_glass:  ");
-    let memberRole = message.member.guild.roles.find("name", "BINUSSIAN");
+    let memberRole = message.member.guild.roles.find("name", "BINUSSIAN📙");
     message.member.addRole(memberRole);
     message.react('✅');
     }
     if(message.content == "!role:TOXIC"){
         message.member.send("Role BINUSSIAN anda berhasil di update! :champagne_glass:  ");
-        let memberRole = message.member.guild.roles.find("name", "TOXIC");
+        let memberRole = message.member.guild.roles.find("name", "TOXIC❌");
         message.member.addRole(memberRole);
         message.react('✅');
         }
     if(message.content == "!role:DOTA"){
     message.member.send("Role BINUSSIAN anda berhasil di update! :champagne_glass:  ");
-    let memberRole = message.member.guild.roles.find("name", "DOTA");
+    let memberRole = message.member.guild.roles.find("name", "DOTA🏹");
     message.member.addRole(memberRole);
     message.react('✅');
     }
     if(message.content == "!role:CONTENT CREATOR"){
         message.member.send("Role CONTENT CREATOR anda berhasil di update! :champagne_glass:  ");
-        let memberRole = message.member.guild.roles.find("name", "CONTENT CREATOR");
+        let memberRole = message.member.guild.roles.find("name", "CONTENT CREATOR🎥");
         message.member.addRole(memberRole);
         message.react('✅');
         }
@@ -72,7 +72,7 @@ client.on('message', message => {
 
     if( message.content.startsWith(`${prefix}status`)){
         message.channel.send('Bot Currently Online!');
-        message.channel.send("Bot Version 1.0.2");
+        message.channel.send("Bot Version 1.2.4");
     }
 
     if( message.content.startsWith(`${prefix}contact`)){
@@ -90,5 +90,43 @@ client.on('message', message => {
     
 })
 
+
+client.on("message", async message => {
+    if(message.author.bot)return;
+    if(message.channel.type === "dm")return;
+
+    let messageArray = message.content.split(" ");
+    let cmd = messageArray[0];
+    let args = messageArray.slice(1);
+
+    if(cmd === `${prefix}report`){
+
+
+        let rUser= message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0])); 
+        if(!rUser) return message.channel.send("Tidak dapat menemukan user!");
+        let reason = args.join(" ").slice(22);
+
+        let reportEmbed = new Discord.RichEmbed()
+        .setDescription("Report-Info")
+        .setColor("#15f153")
+        .addField("Reported User", `${rUser} with ID: ${rUser.id}`)
+        .addField("Reported By", `${message.author} with ID: ${message.author.id}`)
+        .addField("Channel", message.channel)
+        .addField("Time", message.createdAt)
+        .addField("Reason", reason);
+
+        let reportschannel = message.guild.channels.find(`name`, "report-log⚠");
+        if(!reportschannel)return message.channel.send("Tidak dapat menemukan report channel");
+
+        message.delete().catch((O_o) => {});
+        reportschannel.send(reportEmbed);
+
+
+        return;
+    }
+
+
+
+})
 
 client.login(process.env.BOT_TOKEN);

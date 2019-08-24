@@ -83,9 +83,9 @@ client.on('message', message => {
         message.channel.send("List of bot Command!");
         message.channel.send("1. !role:<your role>\tplease request role only in #role-request channel :busts_in_silhouette: ");
         message.channel.send("2. !status\tdisplay bot status  :white_check_mark: ");
-        message.channel.send("3. !contact \tto contact our developer :e_mail: ");
-        message.channel.send("4. !kick <member tag>\tkick member from the group (Developer / Admin / Security role only have this access) :no_entry: ");
-        message.channel.send("5. !ban <member tag>\tban member from the group (Developer / Admin / Security role only have this access) :no_entry_sign: ");
+        message.channel.send("3. !contact \tto contact our developer :e_mail: \n4. !report <tag people> <reason>\tto report people!");
+        message.channel.send("5. !kick <member tag>\tkick member from the group (Developer / Admin / Security role only have this access) :no_entry: ");
+        message.channel.send("6. !ban <member tag>\tban member from the group (Developer / Admin / Security role only have this access) :no_entry_sign: ");
     }
     
 })

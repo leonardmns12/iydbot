@@ -8,7 +8,7 @@ client.once('ready',()=>{
 })
 
 client.on("guildMemberAdd", function(member){
-    member.send("Hello " + member.displayName + " Selamat datang di server In Your Dream :wave:\n Request role mu segera di channel #role-request:busts_in_silhouette: ");
+    member.send("Hello " + member.displayName + " Selamat datang di server In Your Dream Roleplay :wave:\n Request role mu segera di channel #role-request:busts_in_silhouette: ");
     let memberRole = member.guild.roles.find("name", "CHIEF");
     member.addRole(memberRole);
     let guild = member.guild; // Reading property `guild` of guildmember object.
@@ -38,9 +38,9 @@ client.on('message', message => {
     message.member.addRole(memberRole);
     message.react('✅');
     }
-    if(message.content == "!role:TOXIC"){
-        message.member.send("Role BINUSSIAN anda berhasil di update! :champagne_glass:  ");
-        let memberRole = message.member.guild.roles.find("name", "TOXIC❌");
+    if(message.content == "!role:Warga"){
+        message.member.send("Role Warga anda berhasil di update! :champagne_glass:  ");
+        let memberRole = message.member.guild.roles.find("name", "Warga👨");
         message.member.addRole(memberRole);
         message.react('✅');
         }
@@ -50,9 +50,9 @@ client.on('message', message => {
     message.member.addRole(memberRole);
     message.react('✅');
     }
-    if(message.content == "!role:CONTENT CREATOR"){
-        message.member.send("Role CONTENT CREATOR anda berhasil di update! :champagne_glass:  ");
-        let memberRole = message.member.guild.roles.find("name", "CONTENT CREATOR🎥");
+    if(message.content == "!role:Streamer"){
+        message.member.send("Role Facebook Streamer🎬 anda berhasil di update! :champagne_glass:  ");
+        let memberRole = message.member.guild.roles.find("name", "Facebook Streamer🎬");
         message.member.addRole(memberRole);
         message.react('✅');
         }
